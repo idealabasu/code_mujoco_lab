@@ -1,0 +1,17 @@
+services:
+  jupyter:
+    build: 
+      context: .
+      dockerfile: docker/Dockerfile
+#    dockerfile: Dockerfile
+#    image: my_jupyter_image:latest
+#    build: ./build
+    container_name: jupyter
+    environment: 
+    - MUJOCO_GL=osmesa
+    volumes: 
+    - ./jupyter-config:/root/.jupyter
+    - ./python:/python
+    command: bash -c "jupyter lab --ip='0.0.0.0' --port=8888 --no-browser"
+    ports:
+      - 8888:8888      
