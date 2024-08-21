@@ -1,11 +1,6 @@
 services:
   jupyter:
-    build: 
-      context: .
-      dockerfile: docker/Dockerfile
-#    dockerfile: Dockerfile
-#    image: my_jupyter_image:latest
-#    build: ./build
+    image: foldable-robotics:latest
     container_name: jupyter
     environment: 
     - MUJOCO_GL=osmesa
