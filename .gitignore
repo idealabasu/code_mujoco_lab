@@ -2,3 +2,4 @@
 *.mp4
 mesh_*.stl
 docker/image.tar
+MUJOCO_LOG.TXT
